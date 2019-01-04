@@ -1,0 +1,192 @@
+import acm.graphics.*;
+import acm.program.*;
+import java.awt.*;
+
+public class CS106ATiles extends GrapicsProgram {
+  /** Amount of space (in pixels) between tiles */
+  //Constant that determines the necessary alloted spacing between tiles.
+  
+  private static final int TILE_SPACE = 20;
+  
+  //Constants that determine the dimensions of the tiles.
+  private static final int TILE_WIDTH = 144;
+  private static final int TILE_HEIGHT = 72;
+  
+  public void run(){
+    buildTopRight();
+    buildTopLeft();
+    buildBotLeft();
+    buildBotRight();
+   }
+   
+   //Determines the x and y-coordinate of the top right tile.
+   private void buildTopRight(){
+    double topRightX = getWidth()/2 + TILE_SPACE/2.0;
+    double topRightY = getHeight()/2 - TILE_HEIGHT - TILE_SPACE/2.0;
+    
+    //Draws tile in the top right.
+    GRect topRight = new GRect(topRightX, topRightY, TILE_WIDTH, TILE_HEIGHT);
+    //Extension: We like pretty colors.
+    int color = (int) (Math.random()* 10) + 1;
+    if(color == 1) {
+      topRight.setColor(Color.RED);
+    }else if(color == 2) { 
+      topRight.setColor(Color.BLACK);
+    }else if(color == 3) {
+      topRight.setColor(Color.CYAN);
+    }else if(color == 4) {
+      topRight.setColor(Color.DARK_GRAY);
+    }else if(color == 5) {
+      topRight.setColor(Color.GREEN);
+    }else if(color == 6) {
+      topRight.srtColor(Color.MAGENTA);
+    }else if(color == 7){
+      topRight.setColor(Color.YELLOW);
+    }else if(color == 8){
+      topRight.setColor(Color.PINK);
+    }else if(color == 9){
+      topRight.setColor(Color.ORANGE);
+    }else if(color == 10){
+      topRight.setColor(Color.BLUE);
+    }
+    add(topRight);
+    
+    
+    //Creates the string inside the tile/
+    String str = "CS106A";
+    
+    //Determines the x and y-coordinate for the "CS106A" label inside the tile.
+    GLabel glabel = new GLabel(str, topRightX, topRightY);
+    glabel.move(TILE_WIDTH/2 - glabel.getWidth()/2, glabel.getAscent()/2 + TILE_HEIGHT/2);
+    add(glabel);
+   }
+   
+   //Determine the x and y-coordinate of the top left tile.
+   private void buildTopLeft(){
+    double topLeftX = getWidth()/2 + TILE_SPACE/2.0;
+    double topLeftY = getHeight()/2 - TILE_HEIGHT - TILE_SPACE/2.0;
+    
+    //Draws the tile in the top left.
+    GRect topLeft = new GRect(topLeftX, topLeftY, TILE_WIDTH, TILE_HEIGHT);
+     //Extension: We like pretty colors.
+    int color = (int) (Math.random()* 10) + 1;
+    if(color == 1) {
+      topLeft.setColor(Color.RED);
+    }else if(color == 2) { 
+      topLeft.setColor(Color.BLACK);
+    }else if(color == 3) {
+      topLeft.setColor(Color.CYAN);
+    }else if(color == 4) {
+      topLeft.setColor(Color.DARK_GRAY);
+    }else if(color == 5) {
+      topLeft.setColor(Color.GREEN);
+    }else if(color == 6) {
+      topLeft.srtColor(Color.MAGENTA);
+    }else if(color == 7){
+      topLeft.setColor(Color.YELLOW);
+    }else if(color == 8){
+      topLeft.setColor(Color.PINK);
+    }else if(color == 9){
+      topLeft.setColor(Color.ORANGE);
+    }else if(color == 10){
+      topLeft.setColor(Color.BLUE);
+    }
+    add(topLeft);
+    
+    //Creates the string inside the tile.
+    Stirng str = "CS106A";
+    
+    //Determines the x and y-coordinate for the "CS106A" label inside the tile.
+    GLabel glabel = new Glabel(str, topLeftX, topLeftY);
+    glabel.move(TILE_WIDTH/2 - glabel.getWidth()/2, glabel.getAscent()/2 + TILE_HEIGHT/2);
+    //Draws the label.
+    add(glabel);
+    
+  }
+  
+    //Determines the x and y-coordinate of the bottom left tile.
+    public void buildBotLeft(){
+      double botLeftX = getWidth()/2 + TILE_SPACE/2.0;
+      double botLeftY = getHeight()/2 - TILE_HEIGHT - TILE_SPACE/2.0;
+      
+      //Draws tile in the bottom left.
+      GRect botLeft = new GRect(botLeftX, botLeftY, TILE_WIDTH, TILE_HEIGHT);
+      
+     //Extension: We like pretty colors.
+      int color = (int) (Math.random()* 10) + 1;
+      if(color == 1) {
+        botLeft.setColor(Color.RED);
+      }else if(color == 2) { 
+        botLeft.setColor(Color.BLACK);
+      }else if(color == 3) {
+        botLeft.setColor(Color.CYAN);
+      }else if(color == 4) {
+        botLeft.setColor(Color.DARK_GRAY);
+      }else if(color == 5) {
+        botLeft.setColor(Color.GREEN);
+      }else if(color == 6) {
+        botLeft.srtColor(Color.MAGENTA);
+      }else if(color == 7){
+        botLeft.setColor(Color.YELLOW);
+      }else if(color == 8){
+        botLeft.setColor(Color.PINK);
+      }else if(color == 9){
+        botLeft.setColor(Color.ORANGE);
+      }else if(color == 10){
+        botLeft.setColor(Color.BLUE);
+      }
+    add(botLeft);
+    
+    //Creates the string inside the tile.
+    String str = "CS106A";
+    
+    //Determines the x and y-coordinate of the "CS106a" label inside the tile.
+    GLabel glabel = new GLabel(str, botLeftX, botLeftY);
+    glabel.move(TILE_WIDTH/2 - glabel.getWidth()/2, glabel.getAscent()/2 + TILE_HEIGHT/2);
+      //Draws the label.
+      add(glabel);     
+     }
+    
+    //Determines the x and y-coordinate of the bottom right tile.
+    public void buildBotRight() {
+      double botRightX = getWidth()/2 + TILE_SPACE/2.0;
+      double botRightY = getHeight()/2 - TILE_HEIGHT - TILE_SPACE/2.0;
+      
+      //Draws the tile in the bottomRight
+      GRect botRight = new GRect(botRightX, botRightY, TILE_WIDTH, TILE_HEIGHT);
+      int color = (int) (Math.random()* 10) + 1;
+      if(color == 1) {
+        botRight.setColor(Color.RED);
+      }else if(color == 2) { 
+        botRight.setColor(Color.BLACK);
+      }else if(color == 3) {
+        botRight.setColor(Color.CYAN);
+      }else if(color == 4) {
+        botRight.setColor(Color.DARK_GRAY);
+      }else if(color == 5) {
+        botRight.setColor(Color.GREEN);
+      }else if(color == 6) {
+        botRight.srtColor(Color.MAGENTA);
+      }else if(color == 7){
+        botRight.setColor(Color.YELLOW);
+      }else if(color == 8){
+        botRight.setColor(Color.PINK);
+      }else if(color == 9){
+        botRight.setColor(Color.ORANGE);
+      }else if(color == 10){
+        botRight.setColor(Color.BLUE);
+      }
+    add(botRight);
+    
+    //Creates the label inside the tile.
+    String str = "CS106A";
+    
+    //Determiens the x and y-coordinate of the "CS106A" label inside the tile.
+    GLabel glabel = new GLabel(str, botRightX, botRightY);
+    glabel.move(TILE_WIDTH/2 - glabel.getWidth()/2, glabel.getAscent()/2 + TILE_HEIGHT/2);
+    
+    //Draws the label.
+    add(glabel);
+   }
+
+    
