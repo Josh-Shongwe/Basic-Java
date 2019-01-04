@@ -1,0 +1,14 @@
+import acm.program.*;
+
+public class PytagoreanTheorem extends ConsoleProgram {
+  public void run(){
+    println("Enter values to compute the Pythagorean Theorem.");
+    //Reads the values entered by the user.
+    double x = readDouble("a: ");
+    double y = readDouble("b: ");
+    //Calculates the square root of the sum of the squared a and b-values.
+    double z = Math.sqrt(((x * x) + (y * y)));
+    println("c = " + z);
+    }
+  }
+    
