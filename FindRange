@@ -1,0 +1,41 @@
+import acm.program.*;
+
+public class FindRange extends ConsoleProgram{
+  private final static int SENTINEL = 0;
+  
+  public void run(){
+    rangeFinder();
+   
+   }
+   
+ 
+  private void rangeFinder(){
+    //Informs the user of the programs purpose. 
+    println("This program finds the largest and smallest numbers.");
+    
+    //Instantiates the x-value, big, and small outside of the loop.
+    int x = readInt("?");
+    int big = x;
+    int small = x;
+
+     //If the first value entered is the sentenel the program tells the user cannot compute.
+    if(big == SENTINEL && small == SENTINEL){
+      println("Sentinel entered on first try. Cannot compute.");
+    }  
+    
+    while(true){
+    x = readInt("?");
+    if( x > big && SENTINEL != 0){
+      big = x;
+    }else if(x < small && SENTINEL != 0){
+      small = x;
+    }else if(x == SENTINEL){
+      println("Smallest : " + small);
+      println("Largest : " + big);
+      break;
+     }
+    } 
+  }
+}
+   
+  
