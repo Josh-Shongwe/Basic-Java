@@ -1,0 +1,37 @@
+import acm.program.*;
+
+public class Hailstone extends ConsoleProgram {
+
+  public void run(){
+    sequence();
+    
+   }
+   
+   private void sequence(){
+    //Allows the user to enter one value.
+    int x = readInt("Enter a number: ");
+    
+    //Begins the counter to see how many steps it takes to make the value 1.
+    int counter = 0;
+    
+    //Loops until the value entered has been manipulated to 1.
+    while(x != 1){
+      if(x % 2 == 0){
+        int halfValue = (x / 2);
+        println(x + " is even, so I take half : " + halfValue);
+        x = halfValue;
+        counter++;
+        
+      } else if ( x % 2 != 0) {
+        int multiply = (3 * x) + 1;
+        println(x + " is odd, so I make 3n + 1: " + multiply);
+        x = multiply;
+        //Counts the step.
+        counter++;        
+      }
+    }
+    //Prompts the reader with the amount of steps it took to reach 1.
+      println("The process took " + counter + " to reach 1");
+      }
+ }
+      
