@@ -1,2 +1,2 @@
-# GUI-Basics
-GUI Basics
+# Basic Java
+Basic Java
